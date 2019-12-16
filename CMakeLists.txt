@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(PROJECT_NAME cpp_project)
+set(PROJECT_NAME wc)
 project(${PROJECT_NAME})
 
 # Set up the compiler flags
-set(CMAKE_CXX_FLAGS "-g -Wall")
+set(CMAKE_CXX_FLAGS "-g -Wall -Wextra -Wshadow -Wnon-virtual-dtor")
 set(CMAKE_CXX_STANDARD 14)
 
 # Inlcude directories
@@ -21,10 +21,10 @@ list(REMOVE_ITEM SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp)
 add_library(cpp_project_lib ${SRC_FILES})
 
 # Main is separate
-add_executable(cpp_project ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_executable(wc ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 # linking Main against the library
-target_link_libraries(cpp_project cpp_project_lib)
+target_link_libraries(wc cpp_project_lib)
 
 # google test is a git submodule
 add_subdirectory(./googletest)

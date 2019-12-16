@@ -4,5 +4,5 @@
 
 namespace utils
 {
-    std::string GetName();
+    
 }; // utils

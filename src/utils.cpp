@@ -2,8 +2,4 @@
 
 namespace utils 
 {
-    std::string GetName()
-    {
-        return "world";
-    }
 };
