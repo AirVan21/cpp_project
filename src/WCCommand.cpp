@@ -2,10 +2,24 @@
 
 #include "../include/WCCommand.h"
 
-WCCommand::WCCommand(std::vector<std::string> arguments)
+WCCommand::WCCommand(const std::vector<std::string>& arguments)
 {
     for (const std::string& argument : arguments)
     {
-        std::cout << argument << std::endl;
+        std::cout << argument << ' ';
+    }
+    std::cout << std::endl;
+}
+
+bool WCCommand::IsValid(const std::vector<std::string>& arguments)
+{
+    if (arguments.empty())
+    {
+        return false;
+    }
+    else
+    {
+        // TODO: implement logic which verifies valid input
+        return false;
     }
 }

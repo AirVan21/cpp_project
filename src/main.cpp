@@ -9,6 +9,7 @@ int main(int argc, char** argv)
     {
         arguments.emplace_back(argv[i]);
     }
-    WCCommand wc(std::move(arguments));
+    WCCommand wc(arguments);
+
     return 0;
 }
