@@ -23,3 +23,18 @@ bool WCCommand::IsValid(const std::vector<std::string>& arguments)
         return false;
     }
 }
+
+std::vector<size_t> WCCommand::GetLineAmount()
+{
+    return {};
+}
+
+std::vector<size_t> WCCommand::GetWordAmount()
+{
+    return {};
+}
+
+std::vector<size_t> WCCommand::GetCharAmount()
+{
+    return {};
+}
