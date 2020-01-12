@@ -9,8 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Update submodule
-      run: git submodule update --init --recursive
+      with: 
+        submodules: true
     - name: Generate build files using cmake
       run: cmake CMakeLists.txt
     - name: Run make
